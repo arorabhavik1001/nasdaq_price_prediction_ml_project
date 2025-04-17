@@ -16,7 +16,7 @@ def predict():
     return jsonify({'prediction': prediction.tolist()})
 
 @app.route('/ping', methods=['GET'])
-def predict():
+def ping():
     return "Pong"
 
 if __name__ == '__main__':
