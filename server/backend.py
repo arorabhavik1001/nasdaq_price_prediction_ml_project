@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 import pickle
 import numpy as np
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Load the model
 with open('stock_price_prediction_model.pkl', 'rb') as f:
