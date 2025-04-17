@@ -15,5 +15,9 @@ def predict():
     prediction = model.predict(features)
     return jsonify({'prediction': prediction.tolist()})
 
+@app.route('/ping', methods=['GET'])
+def predict():
+    return "Pong"
+
 if __name__ == '__main__':
     app.run(debug=True)
